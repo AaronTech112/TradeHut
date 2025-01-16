@@ -335,9 +335,30 @@
                 </div>
             </div>
         </div>
+        <style>
+            footer {
+                bottom: 0;
+                width: 100%;
+                background-color: #0f1835;
+                text-align: center;
+                padding: 10px 0;
+                font-size: 14px;
+                color: #555;
+                box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+        </style>
     </section>
-</body>
+    <footer>
+        &copy; <span id="year"></span> TradeHut. All rights reserved.
+    </footer>
 
+
+</body>
+<script>
+    // Dynamically set the current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 <script>
     function sendToWhatsApp(e) {
         e.preventDefault();
