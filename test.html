@@ -1,0 +1,505 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeHut - Financial Consulting & Trading Education</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo.png">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <!-- Icon image -->
+                <img src="logo2.png" alt="TradeHut Logo" class="logo-icon">
+                <h1>TradeHut</h1>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#performance">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Achieve Financial Independence</h1>
+            <p>Expert financial consulting and trading education for your wealth-building journey</p>
+            <div class="hero-buttons">
+                <a href="https://t.me/tradehut01" class="btn primary-btn">Join Our Telegram</a>
+                <a href="#services" class="btn secondary-btn">Explore Services</a>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+    <!-- Add this after the hero section in your index.html -->
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Financial Consulting</h3>
+                    <p>Expert financial advice for individuals with capital seeking clear investment strategies.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Trading Education</h3>
+                    <p>Comprehensive trading education and analytical sessions for market success.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-signal"></i>
+                    </div>
+                    <h3>Signal Provision</h3>
+                    <p>Premium trade signals with over 30% ROI monthly for our clients.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Wealth Protection</h3>
+                    <p>Strategic wealth protection solutions against market inflation.</p>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section class="performance" id="performance">
+        <div class="section-container">
+            <div class="section-title">
+                <h2>Our Performance</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="performance-content">
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <h3>30%+</h3>
+                        <p>Monthly ROI</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>1000+</h3>
+                        <p>Active Traders</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>24/7</h3>
+                        <p>Support</p>
+                    </div>
+                </div>
+
+                <!-- Testimonials Slider -->
+                <div class="testimonials-slider">
+                    <div class="testimonial-container" id="testimonialContainer">
+                        <!-- Testimonials will be added dynamically via JavaScript -->
+                    </div>
+                    <button class="slider-btn prev" onclick="prevSlide()">❮</button>
+                    <button class="slider-btn next" onclick="nextSlide()">❯</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Add this after the Performance section in your index.html -->
+
+    <!-- Add this after the hero section and before the services section -->
+
+    <section class="why-tradehut" id="about">
+        <div class="why-tradehut-container">
+            <!-- Left side - Image -->
+            <div class="why-tradehut-image" data-aos="fade-right">
+                <div class="image-wrapper">
+                    <!-- Replace with your actual image path -->
+                    <img src="girl.PNG" alt="TradeHut Mission">
+                    <div class="image-overlay-pattern"></div>
+                </div>
+            </div>
+
+            <!-- Right side - Content -->
+            <div class="why-tradehut-content" data-aos="fade-left">
+                <div class="content-wrapper">
+                    <h2>Why Choose TradeHut</h2>
+                    <div class="underline"></div>
+
+                    <p class="mission-statement">
+                        Tradehut is a dynamic financial consulting company dedicated to empowering individuals and businesses to achieve financial independence and resilience in an ever-changing economic landscape.
+                    </p>
+
+                    <p class="mission-detail">
+                        Our mission is to equip our clients with the tools, knowledge, and strategies to make informed financial decisions, grow their wealth, and safeguard their assets against inflation.
+                    </p>
+
+                    <div class="key-points">
+                        <div class="key-point">
+                            <div class="point-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="point-text">
+                                <h4>Expert Analysis</h4>
+                                <p>Professional market analysis and strategic insights</p>
+                            </div>
+                        </div>
+
+                        <div class="key-point">
+                            <div class="point-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="point-text">
+                                <h4>Risk Management</h4>
+                                <p>Comprehensive risk assessment and protection strategies</p>
+                            </div>
+                        </div>
+
+                        <div class="key-point">
+                            <div class="point-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="point-text">
+                                <h4>Dedicated Support</h4>
+                                <p>24/7 professional support and guidance</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="cta-button">Start Your Journey</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Resources Section -->
+    <section class="education" id="education">
+        <div class="section-container">
+            <div class="section-title">
+                <h2>Educational Resources</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="education-content">
+                <!-- Resources Grid -->
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <i class="fas fa-book-reader"></i>
+                        <h3>Trading Basics</h3>
+                        <p>Foundation course for beginners entering the trading world.</p>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>Technical Analysis</h3>
+                        <p>Advanced chart patterns and technical indicators.</p>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Live Sessions</h3>
+                        <p>Interactive trading sessions with our experts.</p>
+                    </div>
+                </div>
+
+                <!-- TradeHut Gallery -->
+                <div class="tradehut-gallery">
+                    <h3>TradeHut in Action</h3>
+                    <div class="gallery-grid">
+                        <!-- Replace 'image-path.jpg' with your actual image paths -->
+                        <div class="gallery-item">
+                            <img src="img1.jpg" alt="TradeHut Session">
+                            <div class="gallery-overlay">
+                                <span>Click To View Profits</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img2.jpg" alt="TradeHut Analysis">
+                            <div class="gallery-overlay">
+                                <span>Click To View Profits</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img3.jpg" alt="TradeHut Team">
+                            <div class="gallery-overlay">
+                                <span>Click To View Profits</span>
+                            </div>
+                        </div>
+                        <!-- Add more gallery items as needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="section-title">
+                <h2>Get in Touch</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Connect With Us</h3>
+                    <div class="info-item">
+                        <i class="fab fa-telegram"></i>
+                        <div>
+                            <h4>Telegram</h4>
+                            <a href="https://t.me/tradehut01" style="text-decoration: none; color: white;">
+                                <p>@tradehut01</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+2349038671092</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>Tradehutfinance@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@tradehut1?_t=ZM-8su4pwPEKbW&_r=1" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://x.com/tradehut1?s=21" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/share/QQa5prbb9dJC3BSk/?mibextid=LQQJ4d" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/tradehut/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" required>
+                            <option value="">Select Service</option>
+                            <option value="consulting">Financial Consulting</option>
+                            <option value="education">Trading Education</option>
+                            <option value="signals">Signal Service</option>
+                        </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    // script.js
+    // Navigation Menu Toggle
+    function showMenu() {
+        document.getElementById("navLinks").style.right = "0";
+    }
+
+    function hideMenu() {
+        document.getElementById("navLinks").style.right = "-200px";
+    }
+
+    // Navbar Scroll Effect
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.style.background = 'rgba(15, 24, 53, 1)';
+            navbar.style.padding = '10px 0';
+        } else {
+            navbar.style.background = 'rgba(15, 24, 53, 0.95)';
+            navbar.style.padding = '15px 0';
+        }
+    });
+</script>
+<script>
+    // Add this to your script.js
+
+    // Testimonials Data
+    const testimonials = [{
+        name: "John Doe",
+        message: "TradeHut's signals have consistently delivered 30%+ ROI. Excellent service!",
+        rating: 5,
+        image: "t1.jpg", // You'll replace these with your actual image paths
+        date: "October 2023"
+    }, {
+        name: "Jane Smith",
+        message: "The educational resources helped me understand trading like never before.",
+        rating: 5,
+        image: "t2.jpg",
+        date: "September 2023"
+    }, {
+        name: "Mike Johnson",
+        message: "Professional team with outstanding results. Highly recommended!",
+        rating: 5,
+        image: "t3.jpg",
+        date: "October 2023"
+    }];
+
+    let currentSlide = 0;
+
+    // Initialize testimonials
+    function initTestimonials() {
+        const container = document.getElementById('testimonialContainer');
+        testimonials.forEach((testimonial, index) => {
+            const testimonialDiv = document.createElement('div');
+            testimonialDiv.className = 'testimonial';
+            testimonialDiv.style.flex = '0 0 100%';
+
+            let stars = '★'.repeat(testimonial.rating) + '☆'.repeat(5 - testimonial.rating);
+
+            testimonialDiv.innerHTML = `
+            <div class="testimonial-content">
+                <div class="testimonial-image-container">
+                    <img src="${testimonial.image}" alt="Trading Result" class="testimonial-image">
+                    <div class="image-overlay">
+                        <span class="zoom-icon">🔍</span>
+                    </div>
+                </div>
+                <div class="testimonial-text-content">
+                    <p class="testimonial-text">"${testimonial.message}"</p>
+                    <div class="testimonial-author">
+                        <h4>${testimonial.name}</h4>
+                        <div class="stars">${stars}</div>
+                        <span class="testimonial-date">${testimonial.date}</span>
+                    </div>
+                </div>
+            </div>
+        `;
+
+            // Add click event for image zoom
+            const imageContainer = testimonialDiv.querySelector('.testimonial-image-container');
+            imageContainer.addEventListener('click', () => {
+                openImageModal(testimonial.image);
+            });
+
+            container.appendChild(testimonialDiv);
+        });
+    }
+
+    // Add modal functionality for image zoom
+    function openImageModal(imageSrc) {
+        const modal = document.createElement('div');
+        modal.className = 'image-modal';
+        modal.innerHTML = `
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img src="${imageSrc}" alt="Trading Result">
+        </div>
+    `;
+        document.body.appendChild(modal);
+
+        modal.querySelector('.close-modal').onclick = () => {
+            modal.remove();
+        };
+
+        modal.onclick = (e) => {
+            if (e.target === modal) {
+                modal.remove();
+            }
+        };
+    }
+    // Slider Navigation
+    function showSlide(n) {
+        const container = document.getElementById('testimonialContainer');
+        currentSlide = n;
+
+        if (currentSlide >= testimonials.length) currentSlide = 0;
+        if (currentSlide < 0) currentSlide = testimonials.length - 1;
+
+        container.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    // Initialize when document is loaded
+    document.addEventListener('DOMContentLoaded', initTestimonials);
+</script>
+<script>
+    // Add this to your script.js
+
+    // Contact Form Handling
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Add your form submission logic here
+        // You can use fetch API to send the data to your server
+
+        alert('Thank you for your message! We will get back to you soon.');
+        this.reset();
+    });
+
+    // Gallery Image Modal
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const imgSrc = this.querySelector('img').src;
+            openImageModal(imgSrc);
+        });
+    });
+</script>
+<script>
+    // Add this to your script.js
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    });
+</script>
+
+</html>
