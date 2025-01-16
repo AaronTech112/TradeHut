@@ -309,7 +309,7 @@
                 </div>
 
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contactForm" onsubmit="sendToWhatsApp(event)">
                         <div class="form-group">
                             <input type="text" id="name" required>
                             <label for="name">Your Name</label>
@@ -337,6 +337,37 @@
         </div>
     </section>
 </body>
+
+<script>
+    function sendToWhatsApp(e) {
+        e.preventDefault();
+
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const service = document.getElementById('service').value;
+        const message = document.getElementById('message').value;
+
+        // Format the message
+        const formattedMessage =
+            `Name: ${name}%0A` + // %0A adds a new line in WhatsApp
+            `Email: ${email}%0A` +
+            `Service: ${service}%0A` +
+            `Message: ${message}`;
+
+        // WhatsApp number
+        const phoneNumber = "2349038671092"; // Remove + and add country code without +
+
+        // Create WhatsApp URL
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${formattedMessage}`;
+
+        // Redirect to WhatsApp
+        window.open(whatsappURL, '_blank');
+
+        // Optional: Reset form after sending
+        document.getElementById('contactForm').reset();
+    }
+</script>
 <script>
     // script.js
     // Navigation Menu Toggle
